@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.yunusemre.ogrencikayit.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/kayitGidis"
+            app:destination="@id/kayitFragment" />
+        <argument
+            android:name="ogrenci"
+            app:argType="com.yunusemre.ogrencikayit.Ogrenci" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitFragment"
+        android:name="com.yunusemre.ogrencikayit.KayitFragment"
+        android:label="fragment_kayit"
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/anasayfaGidis"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+</navigation>
